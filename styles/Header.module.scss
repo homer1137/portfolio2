@@ -1,0 +1,35 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main {
+    max-height: 1vh;
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-color);
+    color: var(--font-color2);
+  }
+
+.wrapper1 {
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper2 {
+    display: flex;
+    justify-content: space-between;
+}
+.language {
+    padding-left: 3rem;
+  }
+.menuItem{
+    padding-left: 1rem;
+}
+
+
+
+
+
+
