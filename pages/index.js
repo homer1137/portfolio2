@@ -7,9 +7,7 @@ import { HomeMain } from "../components/Home/HomeMain";
 import { HomePic } from "../components/Home/HomePic";
 import { BigText, SmallText } from "../components/Home/HomeTexts";
 import {
-  HomeCoral1,
-  HomeCoral2,
-  HomeCoral3,
+  HomeCoral1
 } from "../components/Home/HomeCoral";
 import {
   StyledJellyFish1,
@@ -28,7 +26,7 @@ export default function Home() {
   const [width, setWidth] = useState(null);
 
   function catchX(e) {
-    setXposition(e.nativeEvent.clientX);
+    setXposition(e.nativeEvent.screenX);
   }
   let value = (xPosition - width / 2) / 9;
 
