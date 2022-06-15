@@ -38,15 +38,20 @@ export const StyledFish1 = styled.div`
 
 var fishAnimation2 = (xPosition) => keyframes`
   0% {
-    top: 50vh;
-    left: ${20-xPosition/100+'vw'};
-    transform: rotateY(0deg)
+    
+    transform: translate(0);
   }
- 
+  49% {  
+    transform:  translate(300px);
+    
+  }
+  50% {  
+    transform: translate(300px) rotateY(180deg);
+    
+  }
   100% {  
-    top: 50vh;
-    left: ${60-xPosition/100+'vw'};
-    transform: rotateY(180deg);
+    transform:  translate(0) rotateY(180deg);
+    
   }
 `
 
@@ -54,10 +59,10 @@ export const StyledFish2 = styled.div`
   width: 150px;
   height: 150px;
   position: relative;
-  z-index: 1;
-  transition-duration: 2s;
-  animation: ${props => fishAnimation2(props.xPosition)} 40s linear infinite backwards;
-  top: 50vh;
-  left: ${props =>(60-props.xPosition/100+'vw')};
+  z-index: 3;
+  animation: ${props => fishAnimation2(props.col)} 14s linear infinite backwards;
+  top: ${props=>-props.value/20+30+'vh'};
+  left: 20vw;
+ 
 `
 
