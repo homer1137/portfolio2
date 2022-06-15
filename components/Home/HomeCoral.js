@@ -7,22 +7,10 @@ export const HomeCoral1 = styled.div`
   z-index: 5;
   
   left: ${props=>-props.value/10+15+'vw'};
-  bottom: -5vh;
-`
-
-export const HomeCoral2 = styled.div`
-  width:450px;
+  bottom: 0;
+  @media (max-width: 768px) {
+    width:350px;
   height: 350px;
-  position: absolute;
-  z-index: 1;
-  bottom: -30vh;
-  left: 50vw;
-`
-export const HomeCoral3 = styled.div`
-  width:550px;
-  height: 350px;
-  position: absolute;
-  z-index: 4;
-  bottom: -10vh;
-  left: ${props=>-props.value/20+20+'vw'};
+  left: ${props=>-props.value/10+5+'vw'};
+  }
 `

@@ -6,6 +6,7 @@ import { HomeContainer } from "../components/Home/HomeContainer";
 import { HomeMain } from "../components/Home/HomeMain";
 import { HomePic } from "../components/Home/HomePic";
 import { BigText, SmallText } from "../components/Home/HomeTexts";
+import { HomeSection } from "../components/Home/HomeSection";
 import {
   HomeCoral1
 } from "../components/Home/HomeCoral";
@@ -31,16 +32,18 @@ export default function Home() {
   let value = (xPosition - width / 2) / 9;
 
   return (
-    <HomeContainer
-      onMouseMove={(e) => {
-        catchX(e);
-      }}
-    >
+    
+    <>
       <Head>
         <title>Portfolio</title>
         <meta name="description" content="Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
+      <HomeMain onMouseMove={(e) => {
+        catchX(e);
+      }}>
+      <HomeSection>
       <HomePic ref={ref}>
         <Image
           src="/background/sky.jpg"
@@ -48,48 +51,54 @@ export default function Home() {
           layout={"fill"}
         />
       </HomePic>
-      <HomeMain>
-        <BigText>Welcome to my portfolio</BigText>
-        <SmallText>here you can see some of my skills</SmallText>
+      <HomeContainer>
+      <BigText>Welcome to my portfolio</BigText>
+      <SmallText>here you can see some of my skills</SmallText>
 
-        <HomeCoral1 value={value}>
-          <Image
-            src="/baloons/free_cutpeople_19.png"
-            alt="Picture of coral"
-            layout={"responsive"}
-            height={950}
-            width={550}
-          />
-        </HomeCoral1>
+      <HomeCoral1 value={value}>
+        <Image
+          src="/baloons/manWithThePhone.png"
+          alt="Picture of coral"
+          layout={"responsive"}
+          height={550}
+          width={550}
+        />
+      </HomeCoral1>
 
-        <StyledJellyFish1 value={value}>
-          <Image
-            src="/baloons/ballon4.png"
-            alt="Picture of coral"
-            layout={"responsive"}
-            height={150}
-            width={150}
-          />
-        </StyledJellyFish1>
-        <StyledJellyFish2 value={value}>
-          <Image
-            src="/baloons/ballon1.png"
-            alt="Picture of coral"
-            layout={"responsive"}
-            height={50}
-            width={50}
-          />
-        </StyledJellyFish2>
-        <StyledJellyFish3 value={value}>
-          <Image
-            src="/baloons/ballon2.png"
-            alt="Picture of coral"
-            layout={"responsive"}
-            height={200}
-            width={200}
-          />
-        </StyledJellyFish3>
+      <StyledJellyFish1 value={value}>
+        <Image
+          src="/baloons/ballon4.png"
+          alt="Picture of coral"
+          layout={"responsive"}
+          height={150}
+          width={150}
+        />
+      </StyledJellyFish1>
+      <StyledJellyFish2 value={value}>
+        <Image
+          src="/baloons/ballon1.png"
+          alt="Picture of coral"
+          layout={"responsive"}
+          height={50}
+          width={50}
+        />
+      </StyledJellyFish2>
+      <StyledJellyFish3 value={value}>
+        <Image
+          src="/baloons/ballon2.png"
+          alt="Picture of coral"
+          layout={"responsive"}
+          height={200}
+          width={200}
+        />
+      </StyledJellyFish3>
+      </HomeContainer>
+      </HomeSection>
+      <HomeSection style={{backgroundColor: 'coral'}}><BigText>Section 3</BigText></HomeSection>  
+      <HomeSection style={{backgroundColor: 'blue'}}><BigText>Section 4</BigText></HomeSection>  
+      <HomeSection style={{backgroundColor: 'green'}}><BigText>Section 5</BigText></HomeSection>    
       </HomeMain>
-    </HomeContainer>
+      
+    </>
   );
 }
